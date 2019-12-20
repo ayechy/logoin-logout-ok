@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+{% block title %}S'inscrire{% endblock %}
+
+{% block body %}
+
+{{form_start(form)}}
+
+<div class="container"> 
+
+<h1>Merci de mettre les inforamtions nécessaire</h1><br>
+
+{{form_row(form.username, {'attr':{'placeholder':'Username'}})}}<br>
+{{form_row(form.email, {'attr':{'placeholder':'Email'}})}}<br>
+{{ form_row(form.plainPassword.first, {'attr':{'placeholder':'Mot de passe'}}) }}<br>
+{{ form_row(form.plainPassword.second, {'attr':{'placeholder':'Confirmer le mot de passe'}}) }}<br>
+
+<button type="submit" class="btn btn-info">S'inscrire</button>
+{{form_end(form)}}
+
+
+
+
+</div>
+{% endblock %}
